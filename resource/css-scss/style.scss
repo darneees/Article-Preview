@@ -1,0 +1,426 @@
+@import 'imports/variables',
+        'imports/functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+* {
+    @include reset();
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background-color: $bg-white-70;
+    overflow: hidden;
+}
+
+
+main{
+    @include align(column, center, center, 0);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+
+    .sec-container {
+        @include align(column, center, center, 0);
+        background-color: $bg-white-80;
+        height: 65%;
+        width: 90%;
+        border-radius: 1rem;
+        box-shadow: $bg-shadow-60;
+        position: relative;
+        z-index: 2;
+
+        animation: fadeIn;
+        animation-duration: 2s;
+
+        .sec-image {
+            width: 100%;
+            height: 35%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem 1rem 0 0;
+            }
+        }
+
+        .sec-content {
+            @include align(column, center, center, 0);
+            height: 65%;
+
+            .sec-header {
+                @include align(column, center, center, 1rem);
+                width: 100%;
+                height: 70%;
+                padding: 0 2rem;
+                overflow-y: hidden;
+                
+    
+                h1 {
+                    color: $bg-dark-20;
+                    font-size: 1.4rem;
+                }
+    
+                p {
+                    color: $bg-gray-30;
+                    text-indent: .6rem;
+                    font-size: 1rem;
+                }
+            }
+    
+            .sec-footer {
+                @include align(row, space-evenly, center, 0);
+                width: 100%;
+                height: 30%;
+                padding: 0 1.5rem;
+
+                overflow-x: hidden;
+    
+                figure {
+                    @include align(column, center, center, 0);
+                    width: 18.5%;
+                    border-radius: 50%;
+                    border: .2rem solid $bg-gray-40;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+    
+                article {
+                    @include align(column, center, start, .2rem);
+                    width: 60%;
+                    padding: 0 0 0 .5rem;
+    
+                    h4 {
+                        color: $bg-blue-50;
+                        font-size: 1rem;
+                    }
+    
+                    p {
+                        color: $bg-gray-30;
+                        font-size: 1rem;
+                    }
+                }
+    
+                button {
+                    @include align(column, center, center, 0);
+                    background-color: transparent;
+                    border: .15rem solid $bg-blue-50;
+                    width: 21.5%;
+                    outline: none;
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    
+                    ion-icon {
+                        color: $bg-blue-50;
+                        font-size: 1.5rem;
+                    }
+    
+                }
+            }
+        }
+
+        #popup {
+            @include align(row, center, center, 1rem);
+            background-color: $bg-blue-50;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 6rem;
+            z-index: 3;
+            border-radius: 1rem;
+            display: none;
+
+            h2 {
+                color: $bg-white-70;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            article {
+                @include align(row, center, center, 1rem);
+
+                ion-icon {
+                    color: $bg-white-70;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+            }
+
+
+            button {
+                background-color: transparent;
+                position: absolute;
+                right: .8rem;
+                top: .8rem;
+                border: none;
+                outline: none;
+                cursor: pointer;
+
+                ion-icon {
+                    color: $bg-white-70;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    .attribution {
+        position: absolute;
+        left: auto;
+        text-align: center;
+        bottom: 2rem;
+        color: $bg-gray-30;
+        font-size: 1rem;
+        padding: 0 2rem;
+
+        animation: fadeIn;
+        animation-duration: 2s;
+
+        a {
+            font-weight: 800;
+            color: $bg-blue-50;
+            text-decoration: none;
+        }
+    }
+}
+
+::selection {
+    background-color: $bg-dark-20;
+    color: $bg-white-70;
+}
+
+@media (min-width: 1200px) {
+    main {
+        .sec-container {
+            @include align(row, center, center, 0);
+            height: 50%;
+            width: 65%;
+
+            .sec-image {
+                width: 50%;
+                height: 100%;
+
+                img {
+                    border-radius: 1rem 0 0 1rem;
+                }
+            }
+
+            .sec-content {
+                height: 100%;
+                width: 50%;
+
+                .sec-header {
+                    height: 72%;
+
+                    h1 {
+                        font-size: 2rem;
+                    }
+        
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+    
+                .sec-footer {
+                    height: 28%;
+
+                    figure {
+                        width: 15.5%;
+                    }
+
+                    article {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    button {
+                        height: 3.1rem;
+                        width: 3.1rem;
+                    }
+                }
+            }
+
+            #popup {
+                width: 30%;
+                right: 2.5rem;
+                bottom: -5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    main {
+        .sec-container {
+            @include align(row, center, center, 0);
+            height: 50%;
+            width: 80%;
+
+            .sec-image {
+                width: 50%;
+                height: 100%;
+
+                img {
+                    border-radius: 1rem 0 0 1rem;
+                }
+            }
+
+            .sec-content {
+                height: 100%;
+                width: 50%;
+
+                .sec-header {
+                    height: 80%;
+
+                    h1 {
+                        font-size: 2rem;
+                    }
+        
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+    
+                .sec-footer {
+                    height: 20%;
+
+                    figure {
+                        width: 15.5%;
+                    }
+
+                    article {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    button {
+                        height: 3.1rem;
+                        width: 3.1rem;
+                    }
+                }
+            }
+
+            #popup {
+                width: 50%;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 680px) and (max-width: 999px) {
+    main {
+        .sec-container {
+            height: 65%;
+            width: 60%;
+
+            .sec-image {
+                height: 35%;
+            }
+
+            .sec-content {
+                height: 65%;
+
+                .sec-header {
+                    height: 70%;
+
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+        
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+    
+                .sec-footer {
+                    height: 30%;
+
+                    figure {
+                        width: 15.5%;
+                    }
+
+                    article {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                    
+                    button {
+                        height: 3.1rem;
+                        width: 3.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 430px) and (max-width: 679px) {
+    main {
+        .sec-container {
+            height: 70%;
+            width: 80%;
+
+            .sec-image {
+                height: 35%;
+            }
+
+            .sec-content {
+                height: 65%;
+
+                .sec-header {
+                    height: 70%;
+                }
+    
+                .sec-footer {
+                    height: 30%;
+
+                    figure {
+                        width: 17.5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    main {
+        @include align(column, start, center, 0);
+        padding: 2rem 0 0 0;
+        
+        .sec-container {
+            height: 80%;
+            width: 90%;
+
+            .sec-image {
+                height: 35%;
+            }
+
+            .sec-content {
+                height: 65%;
+
+                .sec-header {
+                    height: 70%;
+                }
+    
+                .sec-footer {
+                    height: 30%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: #EDEDED;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+main .sec-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: #ffffff;
+  height: 65%;
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 20px;
+  position: relative;
+  z-index: 2;
+  animation: fadeIn;
+  animation-duration: 2s;
+}
+main .sec-container .sec-image {
+  width: 100%;
+  height: 35%;
+}
+main .sec-container .sec-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+main .sec-container .sec-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 65%;
+}
+main .sec-container .sec-content .sec-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 70%;
+  padding: 0 2rem;
+  overflow-y: hidden;
+}
+main .sec-container .sec-content .sec-header h1 {
+  color: #252529;
+  font-size: 1.4rem;
+}
+main .sec-container .sec-content .sec-header p {
+  color: rgba(141, 141, 141, 0.8470588235);
+  text-indent: 0.6rem;
+  font-size: 1rem;
+}
+main .sec-container .sec-content .sec-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 30%;
+  padding: 0 1.5rem;
+  overflow-x: hidden;
+}
+main .sec-container .sec-content .sec-footer figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 18.5%;
+  border-radius: 50%;
+  border: 0.2rem solid rgba(171, 171, 171, 0.3803921569);
+}
+main .sec-container .sec-content .sec-footer figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main .sec-container .sec-content .sec-footer article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.2rem;
+  width: 60%;
+  padding: 0 0 0 0.5rem;
+}
+main .sec-container .sec-content .sec-footer article h4 {
+  color: #537FE7;
+  font-size: 1rem;
+}
+main .sec-container .sec-content .sec-footer article p {
+  color: rgba(141, 141, 141, 0.8470588235);
+  font-size: 1rem;
+}
+main .sec-container .sec-content .sec-footer button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: transparent;
+  border: 0.15rem solid #537FE7;
+  width: 21.5%;
+  outline: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+main .sec-container .sec-content .sec-footer button ion-icon {
+  color: #537FE7;
+  font-size: 1.5rem;
+}
+main .sec-container #popup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #537FE7;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6rem;
+  z-index: 3;
+  border-radius: 1rem;
+  display: none;
+}
+main .sec-container #popup h2 {
+  color: #EDEDED;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+main .sec-container #popup article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .sec-container #popup article ion-icon {
+  color: #EDEDED;
+  font-size: 2rem;
+  cursor: pointer;
+}
+main .sec-container #popup button {
+  background-color: transparent;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+main .sec-container #popup button ion-icon {
+  color: #EDEDED;
+  font-size: 1.8rem;
+}
+main .attribution {
+  position: absolute;
+  left: auto;
+  text-align: center;
+  bottom: 2rem;
+  color: rgba(141, 141, 141, 0.8470588235);
+  font-size: 1rem;
+  padding: 0 2rem;
+  animation: fadeIn;
+  animation-duration: 2s;
+}
+main .attribution a {
+  font-weight: 800;
+  color: #537FE7;
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background-color: #252529;
+  color: #EDEDED;
+}
+
+::selection {
+  background-color: #252529;
+  color: #EDEDED;
+}
+
+@media (min-width: 1200px) {
+  main .sec-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    height: 50%;
+    width: 65%;
+  }
+  main .sec-container .sec-image {
+    width: 50%;
+    height: 100%;
+  }
+  main .sec-container .sec-image img {
+    border-radius: 1rem 0 0 1rem;
+  }
+  main .sec-container .sec-content {
+    height: 100%;
+    width: 50%;
+  }
+  main .sec-container .sec-content .sec-header {
+    height: 72%;
+  }
+  main .sec-container .sec-content .sec-header h1 {
+    font-size: 2rem;
+  }
+  main .sec-container .sec-content .sec-header p {
+    font-size: 1.1rem;
+  }
+  main .sec-container .sec-content .sec-footer {
+    height: 28%;
+  }
+  main .sec-container .sec-content .sec-footer figure {
+    width: 15.5%;
+  }
+  main .sec-container .sec-content .sec-footer article h4 {
+    font-size: 1.2rem;
+  }
+  main .sec-container .sec-content .sec-footer button {
+    height: 3.1rem;
+    width: 3.1rem;
+  }
+  main .sec-container #popup {
+    width: 30%;
+    right: 2.5rem;
+    bottom: -5rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  main .sec-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    height: 50%;
+    width: 80%;
+  }
+  main .sec-container .sec-image {
+    width: 50%;
+    height: 100%;
+  }
+  main .sec-container .sec-image img {
+    border-radius: 1rem 0 0 1rem;
+  }
+  main .sec-container .sec-content {
+    height: 100%;
+    width: 50%;
+  }
+  main .sec-container .sec-content .sec-header {
+    height: 80%;
+  }
+  main .sec-container .sec-content .sec-header h1 {
+    font-size: 2rem;
+  }
+  main .sec-container .sec-content .sec-header p {
+    font-size: 1.1rem;
+  }
+  main .sec-container .sec-content .sec-footer {
+    height: 20%;
+  }
+  main .sec-container .sec-content .sec-footer figure {
+    width: 15.5%;
+  }
+  main .sec-container .sec-content .sec-footer article h4 {
+    font-size: 1.2rem;
+  }
+  main .sec-container .sec-content .sec-footer button {
+    height: 3.1rem;
+    width: 3.1rem;
+  }
+  main .sec-container #popup {
+    width: 50%;
+    right: 0;
+  }
+}
+@media (min-width: 680px) and (max-width: 999px) {
+  main .sec-container {
+    height: 65%;
+    width: 60%;
+  }
+  main .sec-container .sec-image {
+    height: 35%;
+  }
+  main .sec-container .sec-content {
+    height: 65%;
+  }
+  main .sec-container .sec-content .sec-header {
+    height: 70%;
+  }
+  main .sec-container .sec-content .sec-header h1 {
+    font-size: 1.7rem;
+  }
+  main .sec-container .sec-content .sec-header p {
+    font-size: 1.1rem;
+  }
+  main .sec-container .sec-content .sec-footer {
+    height: 30%;
+  }
+  main .sec-container .sec-content .sec-footer figure {
+    width: 15.5%;
+  }
+  main .sec-container .sec-content .sec-footer article h4 {
+    font-size: 1.2rem;
+  }
+  main .sec-container .sec-content .sec-footer button {
+    height: 3.1rem;
+    width: 3.1rem;
+  }
+}
+@media (min-width: 430px) and (max-width: 679px) {
+  main .sec-container {
+    height: 70%;
+    width: 80%;
+  }
+  main .sec-container .sec-image {
+    height: 35%;
+  }
+  main .sec-container .sec-content {
+    height: 65%;
+  }
+  main .sec-container .sec-content .sec-header {
+    height: 70%;
+  }
+  main .sec-container .sec-content .sec-footer {
+    height: 30%;
+  }
+  main .sec-container .sec-content .sec-footer figure {
+    width: 17.5%;
+  }
+}
+@media (max-width: 429px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0;
+    padding: 2rem 0 0 0;
+  }
+  main .sec-container {
+    height: 80%;
+    width: 90%;
+  }
+  main .sec-container .sec-image {
+    height: 35%;
+  }
+  main .sec-container .sec-content {
+    height: 65%;
+  }
+  main .sec-container .sec-content .sec-header {
+    height: 70%;
+  }
+  main .sec-container .sec-content .sec-footer {
+    height: 30%;
+  }
+}/*# sourceMappingURL=style.css.map */
