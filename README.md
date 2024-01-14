@@ -1,13 +1,7 @@
-<p align="center">
-    Article Preview Component
-</p>
+## :pushpin: Article Preview Component
 
 ![preview](https://github.com/darneees/Article-Preview/assets/79709843/4967bdb3-d979-4a37-bfe8-ed5003a73b97)
 
-
-<h1>
-  Order Summary Component :oncoming_automobile:
-</h1>
 
 ## ✔️ Tecnologias utilizadas:
 - ``HTML5``
@@ -22,9 +16,6 @@ https://ionic.io/ionicons
 https://colorhunt.co/
 
 https://fonts.google.com/specimen/Manrope?query=manr
-
-## :desktop_computer: Deployed
-
 
 
 <p align="center">
